@@ -1,7 +1,5 @@
 # RMS Sales Forecasting & Planning - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **dealfct (Calculates/Update Forecasted Values for Deals)**
 
 |Module Name|dealfct.pc|
@@ -13,13 +11,9 @@
 |**Catalog ID**|RMS209|
 |**Runtime Parameters**||
 
-
-
 **136** Oracle Retail Merchandising System
 
-
 dealfct (Calculates/Update Forecasted Values for Deals)
-
 
 ---
 
@@ -34,8 +28,6 @@ dealfct (Calculates/Update Forecasted Values for Deals)
 |**Catalog ID**|RMS24|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **rmse_rpas_weekly_sales (Extract of Weekly Sales of Forecasted Items for** **RPAS)**
@@ -49,8 +41,6 @@ dealfct (Calculates/Update Forecasted Values for Deals)
 |**Catalog ID**|RMS09|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **rmse_rpas_daily_sales (Extract of Daily Sales of Forecasted Items for** **RPAS)**
@@ -63,8 +53,6 @@ dealfct (Calculates/Update Forecasted Values for Deals)
 |**Module Technology**|Ksh|
 |**Catalog ID**|RMS08|
 |**Runtime Parameters**||
-
-
 
 ---
 

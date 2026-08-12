@@ -1,7 +1,5 @@
 # RMS Vendor Deals & Rebates - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **dealact (Calculate Actual Impact of Billback Deals)**
 
 |Module Name|dealact.pc|
@@ -12,8 +10,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS206|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -28,13 +24,9 @@
 |**Catalog ID**|RMS123|
 |**Runtime Parameters**||
 
-
-
 Operations Guide, Volume 1 - Batch Overviews and Designs **139**
 
-
 vendinvf (Stage Fixed Deal Invoice Information)
-
 
 ---
 

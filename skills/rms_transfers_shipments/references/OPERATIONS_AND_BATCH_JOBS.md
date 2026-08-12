@@ -1,7 +1,5 @@
 # RMS Transfers & Shipments - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **batch_alloctsfupd (Update Allocation and Transfer Based on Changes to** **Up-Charges)**
 
 |s)|Col2|
@@ -13,8 +11,6 @@
 |**Module Technology**|ksh|
 |**Catalog ID**|RMS184|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -29,8 +25,6 @@
 |**Catalog ID**|RMS252|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ## **Transfers, Allocation, and RTV**
@@ -41,8 +35,6 @@ the user interface and near real time RIB integration with Oracle Retail Store I
 Management (SIM) and Oracle Retail Warehouse Management System (RWMS).
 However, RMS does use a variety of batch programs to maintain the data related to these
 transactions.
-
-
 
 ---
 
@@ -58,13 +50,9 @@ transactions.
 |**Catalog ID**|RMS219|
 |**Runtime Parameters**||
 
-
-
 Operations Guide, Volume 1 - Batch Overviews and Designs **245**
 
-
 docclose (Close Transactions with no Expected Appointments, Shipments or Receipts)
-
 
 ---
 
@@ -79,45 +67,31 @@ docclose (Close Transactions with no Expected Appointments, Shipments or Receipt
 |**Integration Catalog ID**|RMS216|
 |**Runtime Parameters**||
 
-
-
 =========================================
 
-## Excerpts from Operations Guide 2 - RIB Integration
-
 ### **ASNOUT Publication API**
-
 
 ---
 
 ### **Transfers Publication API**
 
-
 ---
 
 ### **ASNIN Subscription API**
-
 
 ---
 
 ### **ASNOUT Subscription API**
 
-
 ---
 
 ### **Transfer Subscription API**
 
-
 =========================================
-
-## Excerpts from Operations Guide 3 - Technical Architecture
 
 #### **Transfers**
 
-
-
 Transactions
-
 
 **Receiving the Order in SIM**
 
@@ -127,26 +101,21 @@ The Purchase Order is received with different combinations as given below:
 
 **2.** Under Receive Quantity.
 
-
 **3.** Over Receive Quantity.
 
 **4.** Receive with Damage Quantity.
-
 
 **5.** PO On The FLY – In this scenario, the Purchase Order is created in SIM and not RMS.
 This can be done based on the item and supplier’s detail, when we have the details in
 SIM a PO is displayed.
 
-
 Transfer implies to movement of goods from one location to another. Accordingly to
 SIM, transfer is either store to store transfer or warehouse to store transfer. Transfers can
 be generated in SIM also.
 
-
 **Store To Store Transfer**
 
 The Store to Store transfer is created for the movement of goods from Store A to Store B.
-
 
 **RIB Validation:**
 
@@ -154,12 +123,10 @@ The Store to Store transfer is created for the movement of goods from Store A to
 
 - Verify the Stock-Order/Transfer in StockOrder_Subscriber in RIB-SIM.
 
-
 **Transfer Receiving**
 
 To receive a transfer, select the receiving store in the SIM login form. For dispatching
 transfer from store to store:
-
 
 **1.** Log in to the correct **FROM** store.
 
@@ -172,15 +139,11 @@ to be transferred. The transfer functionality supports both overage and underage
 
 RIB Validation: When the dispatch is completed, a message is sent to RMS.
 
-
   - ASNOUT_PUBLISHER in RIB SIM
-
 
   - ASNOUT_SUBSCRIBER in RIB RMS
 
-
 To receive the transfer from store to store:
-
 
 **5.** Log in to the correct **TO** store.
 
@@ -194,26 +157,20 @@ to be transferred. The transfer functionality supports overage and underage.
 **RIB Validation** : When the receiving is done, a message is sent to RMS. Verify the order
 number in:
 
-
 - Receiving_Publisher in RIB-SIM
 
 - Receiving _Subscriber in RIB-RMS
 
-
 Integrating RMS with Store Inventory Management **239**
 
-
 Transactions
-
 
 **RMS Database Validation**
 
         - Stock on Hand gets updated in ITEM_LOC_SOH table in RMS. Received quantity is
 deducted from FROM store and added in TO store.
 
-
         - Tran code 37 and 38 is posted in TRAN_DATA table.
-
 
 **Warehouse To Store Transfer**
 
@@ -221,17 +178,13 @@ In this case of transfer, the goods are moved from warehouse to another store. T
 must login to the receiving store to receive the transfer. Before receiving in SIM, the
 transfer must to be shipped from the corresponding warehouse.
 
-
 To receive the transfer from Warehouse to Store:
-
 
 **1.** Log in to the correct **TO** store.
 
 **2.** Navigate and select Shipping/Receiving > Warehouse Delivery.
 
-
 **3.** Double-click the container ID which has received from Warehouse.
-
 
 **4.** Edit quantities or record damages.
 
@@ -242,25 +195,20 @@ To receive the transfer from Warehouse to Store:
 **RIB Validation:** When the transfer is received, a message is sent to RMS. Verify the order
 number in:
 
-
         - Receiving_Publisher in RIB-SIM
 
         - Receiving _Subscriber in RIB-RMS
-
 
 **RMS Database Validation:**
 
         - Stock on Hand gets updated in ITEM_LOC_SOH table in RMS. Received quantity is
 deducted from FROM Warehouse and added in TO store.
 
-
         - Tran code 30 and 32 is posted in TRAN_DATA table.
-
 
 **SIM Database Validation:**
 
         - STORE_ITEM_STOCK is increased in SOH for the store.
-
 
 **Transfer On The Fly**
 
@@ -276,9 +224,7 @@ You can create the transfers from one store to another. No other transfers are p
 
 **5.** Click **Dispatch** and accept the warning message.
 
-
 To receive the transfer on the FLY:
-
 
 **6.** The user must log in to the correct TO store.
 
@@ -294,59 +240,45 @@ needs to be transferred. The transfer functionality supports overage and underag
 **RIB Validation** : When receiving is done, message is sent to RMS. Verify the order
 number in:
 
-
         - Receiving_Publisher in RIB-SIM
 
         - Receiving _Subscriber in RIB-RMS
 
-
 **240** Oracle Retail Merchandising System
 
-
 Transactions
-
 
 **RMS Database Validation**
 
         - Stock on Hand is updated in ITEM_LOC_SOH table in RMS. The received quantity is
 deducted from FROM store and added in TO store.
 
-
         - Tran code 30, 32 and 22 is posted in TRAN_DATA table.
 
-
 **Note:**
-
 
           - The Reason Codes created in SIM must be mapped to the RMS
 Inventory Adjustment Reason Codes.
 
-
           - If the external ID is a number and the user is external it implies
 that the transfer is generated in RMS.
-
 
           - If a transfer request is initiated in SIM this message is not
 published in RMS or any other integrated application.
 
-
           - A transfer handles damaged quantities which in turn are put in
 the non-sellable bucket in RMS.
 
-
           - Negative receiving though cannot be done nor can be
 transferred.
-
 
           - We can also receive multiple times against the same transfer for
 the expected quantity. This action will be allowed as long as the
 transfer is open and not restricted by expected quantity.
 
-
           - While transferring we can also add items which were not part of
 the original transfer but we cannot remove the original item
 while we transfer as long as we have stock on hand.
-
 
           - Non ranged items can also be part of the transfer. These are
 items which are not ranged to that particular location but it is

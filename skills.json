@@ -74,9 +74,6 @@
       "path": "skills/rms_custom_flex_attributes"
     },
     {
-      "path": "skills/rms_customer_crm"
-    },
-    {
       "path": "skills/rms_daily_stock_data"
     },
     {
@@ -98,7 +95,7 @@
       "path": "skills/rms_inventory"
     },
     {
-      "path": "skills/rms_invoicing_matching"
+      "path": "skills/reim_invoicing_matching"
     },
     {
       "path": "skills/rms_item_attributes_uda"
@@ -119,7 +116,7 @@
       "path": "skills/rms_organization_hierarchy"
     },
     {
-      "path": "skills/rms_pricing_promotions"
+      "path": "skills/rpm_pricing_promotions"
     },
     {
       "path": "skills/rms_purchase_orders"
@@ -131,13 +128,19 @@
       "path": "skills/rms_rtv_returns"
     },
     {
-      "path": "skills/rms_sales_audit_rules"
+      "path": "skills/resa_sales_audit_exports"
     },
     {
-      "path": "skills/rms_sales_audit_store_days"
+      "path": "skills/resa_sales_audit_rules"
     },
     {
-      "path": "skills/rms_sales_audit_transactions"
+      "path": "skills/resa_sales_audit_store_days"
+    },
+    {
+      "path": "skills/resa_sales_audit_system_config"
+    },
+    {
+      "path": "skills/resa_sales_audit_transactions"
     },
     {
       "path": "skills/rms_seasons_work_orders"

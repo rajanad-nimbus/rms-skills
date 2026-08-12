@@ -11,8 +11,8 @@ This workspace uses the Mat Pocock open agent skill architecture. All agent skil
    - Every skill lives under `.agents/skills/<skill_name>/` and features a lightweight `SKILL.md` (YAML frontmatter + core entity summary).
 
 2. **2-Tier Progressive Retrieval:**
-   - **Tier 1 (`SKILL.md`):** Load `SKILL.md` first to understand high-level domain concepts and core table mappings (~750 tokens).
-   - **Tier 2 (`references/`):** Load specific reference files (`PHYSICAL_DATAMODEL.md`, `FUNCTIONAL_USER_GUIDE.md`, `OPERATIONS_AND_BATCH_JOBS.md`, `SYSTEM_CONFIGURATIONS.md`) on demand when deep technical detail is needed.
+   - **Tier 1 (`SKILL.md`):** Load `SKILL.md` first to understand high-level domain concepts, business process highlights, and core table mappings (~750 tokens).
+   - **Tier 2 (`references/`):** Load specific reference files (`BUSINESS_PROCESS_FLOWS.md`, `PRODUCT_ARCHITECTURE.md`, `PHYSICAL_DATAMODEL.md`, `FUNCTIONAL_USER_GUIDE.md`, `OPERATIONS_AND_BATCH_JOBS.md`, `SYSTEM_CONFIGURATIONS.md`) on demand when deep process, architectural, or technical detail is needed.
 
 3. **Schema Integrity Guarantee:**
    - Preserve 100% physical database table schemas, data types, primary keys, foreign keys, and column comments. Never swallow errors or return fallback dummy data.
@@ -24,10 +24,12 @@ This workspace uses the Mat Pocock open agent skill architecture. All agent skil
 The following 40 domain skills are registered and available in `.agents/skills.json`:
 
 - `rms_purchase_orders` — Purchase Orders, PO Lines, Revisions, Expenses
-- `rms_sales_audit_transactions` — POS Transactions, Headers, Items, Tenders
-- `rms_sales_audit_store_days` — Store Day Audit Balances, Cashier Totals
-- `rms_sales_audit_rules` — Sales Audit Rules Engine & Validation Errors
-- `rms_invoicing_matching` — ReIM 3-Way Invoice Matching, Non-Merchandise Costs
+- `resa_sales_audit_transactions` — POS Transactions, Headers, Items, Tenders
+- `resa_sales_audit_store_days` — Store Day Audit Balances, Cashier Totals
+- `resa_sales_audit_rules` — Sales Audit Rules Engine & Validation Errors
+- `resa_sales_audit_exports` — Outbound Financial Postings (saexprms, saexpgl, saexpach)
+- `resa_sales_audit_system_config` — System Parameters, Error Codes, Security Roles
+- `reim_invoicing_matching` — ReIM 3-Way Invoice Matching, Non-Merchandise Costs
 - `rms_transfers_shipments` — Inter-Store Transfers, ASNs, Shipments
 - `rms_inventory` — Stock-on-Hand Buckets, Stocktake Counts, Adjustments
 - `rms_stock_ledger_financials` — Stock Ledger Financial Rollups, OTB, GL Posting
@@ -36,7 +38,7 @@ The following 40 domain skills are registered and available in `.agents/skills.j
 - `rms_item_packs` — Fashion Packs, Simple Packs, Complex Packs
 - `rms_item_location` — Item-Location Ranging Matrix, Unit Cost/Retail
 - `rms_deals_rebates` — Vendor Deals, Rebates, Fixed Allowances
-- `rms_pricing_promotions` — Price Changes, RPM Markdowns, Promotions
+- `rpm_pricing_promotions` — Price Changes, RPM Markdowns, Promotions
 - `rms_costing_expenses` — Base Costing, Estimated Landed Cost (ELC), Expenses
 - `rms_tariffs_duties` — HTS Tariff Codes, Customs Duties
 - `rms_allocations` — Store Allocation Creation, Demand Distribution
@@ -60,6 +62,9 @@ The following 40 domain skills are registered and available in `.agents/skills.j
 - `rms_svc_suppliers` — Supplier Service Upload Staging
 - `rms_svc_foundation` — Foundation Service Upload Staging
 - `rms_seasons_work_orders` — Seasons, Phases, Finishing Work Orders
-- `rms_customer_crm` — Customer Profiles, Customer Orders
 - `rms_forecasting_planning` — Sales Forecasts, Demand Planning
+- `rms_replenishment` — Replenishment Schedules, Min/Max Stock Rules
+- `rms_custom_flex_attributes` — Custom Flex Attributes (CFA) & Localizations
+- `rms_suppliers_procurement` — Supplier Master, Freight Terms, Business Partners
+- `rms_import_customs` — Customs Entry, Letters of Credit, Trade Country Attributes
 - `rms_data_conversion_staging` — Legacy Data Migration Staging (`DC_*`)

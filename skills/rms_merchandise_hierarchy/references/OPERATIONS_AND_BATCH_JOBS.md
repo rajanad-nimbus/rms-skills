@@ -1,7 +1,5 @@
 # RMS Merchandise Hierarchy - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 #### **reclsdly (Reclassify Items in Merchandise Hierarchy**
 
 |Module Name|Reclsdly.pc|
@@ -12,8 +10,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS302|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -28,8 +24,6 @@
 |**Catalog ID**|RMS130|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **otbdlord (Download Summary of Outstanding Orders on OTB by Subclass)**
@@ -42,8 +36,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS13|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -58,8 +50,6 @@
 |**Catalog ID**|RMS239|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **hstbldmth (Monthly Sales History Rollup By Department, Class And** **Subclass)**
@@ -72,19 +62,13 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS241|
 
-
-
 =========================================
 
-## Excerpts from Operations Guide 2 - RIB Integration
-
 ### **Differentiator Groups Publication API**
-
 
 ---
 
 ### **Item Reclassification Subscription API**
-
 
 ---
 

@@ -1,9 +1,6 @@
 # RMS Seasons & Work Orders - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **Phases of the Batch Cycle & Dependencies**
-
 
 The RMS batch cycle is divided into a number of processing phases.  Phase design is an
 important part of overall RMS batch design. Respecting the phases is critically important
@@ -18,27 +15,20 @@ processing phase of the batch cycle. Both within and across phases, individual p
 also have dependencies. These dependencies ensure that data is in the correct state for
 processing.
 
-
 **2** Oracle Retail Merchandising System
-
 
 Phases of the Batch Cycle & Dependencies
 
-
 The following diagram gives a high level overview of the processing phases of the RMS
 batch cycle:
-
-
 
 ^Note - Ad hoc processes are not
 strictly constrained to one phase
 of the batch cycle.
 
-
 Ad hoc jobs may be run multiple
 times per day in parallel with other
 operations.
-
 
 Ad hoc jobs can have
 dependencies on specific jobs in
@@ -49,49 +39,39 @@ hoc job, it will be picked up by the
 
 next run.
 
-
-
 Phase 0**
 
-
 Admin
-
 
 Phase 1**
 
 RMS Internal
 Processing
 
-
 Phase 2**
 
 RMS Prep &
 & Integration – Uploads
-
 
 Phase 3**
 
 RMS Main
 Processing
 
-
 Phase 4**
 
 RMS Integration –
 Downloads****
-
 
 Phase 5**
 
 ReIM Integration –
 Uploads
 
-
 Phase 6**
 
 ReIM Main
 Processing
-
 
 Phase 7**
 

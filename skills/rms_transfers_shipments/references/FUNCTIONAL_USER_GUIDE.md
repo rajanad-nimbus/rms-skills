@@ -1,59 +1,23 @@
-# RMS Transfers & Shipments - Functional User Guide Workflows & Reports
+# RMS Transfers & Shipments - Functional User Guide Workflows
 
-## Excerpts from Functional User Guide (Workflows & Reports)
-
-#### **Transfer Details Report**
-
-
-The Transfer Details report displays the details the details of a given transfer.
-
+Comprehensive functional user guide covering inter-store transfers, warehouse shipment dispatch, ASN tracking, and receiving reconciliation (`TSFHEAD`, `SHIPMENT`, `BOL_SHIPMENT`).
 
 ---
 
-#### **ViewingTransfer Details Report**
+## 1. Key User Roles & Responsibilities
 
-
-To view the transfer details report:
-
-
-**1.** From the Tasks menu, select **Reports**           - **Inventory**           - **Transfer Details** . The Transfer
-Details Report window appears.
-
-
-RMS BI Publisher Reports **3-9**
-
-
-Inventory Report
-
-
-_**Figure 3–10**_ _**Transfer Details Report**_
-
+| User Role | Primary UI Tasks | Key Approvals & Overrides |
+| :--- | :--- | :--- |
+| **Logistics Coordinator** | Creates inter-store transfer requests, monitors warehouse pick schedules. | Approves transfer requests (`TSFHEAD.STATUS = 'A'`). |
+| **Store Receiving Clerk** | Receives inbound store shipments, records carton count variances, logs damage tickets. | Confirms shipment receipt (`SHIPMENT.STATUS = 'R'`). |
 
 ---
 
-#### **Bill of Lading Manifest Report**
+## 2. Step-by-Step UI Operational Workflows
 
-
-The Bill of Lading Manifest report displays relevant information for each item on a bill
-of lading, such as the quantity, unit cost, and unit retail price for each item.
-
-
----
-
-#### **Viewing Bill of Lading Manifest Report**
-
-
-To view the bill of lading manifest report:
-
-
-**3-10** Oracle® Retail Operational Insights User Guide
-
-
-Inventory Report
-
-
-**1.** From the Tasks menu, select **Reports**           - **Inventory**           - **Bill of Lading Manifest** . The
-Bill of Lading Manifest Report window appears.
-
-
-_**Figure 3–12**_ _**Bill of Lading Manifest Report**_
+### 2.1 Transfer Creation & Dispatch Lifecycle
+1. Navigate to **Tasks -> Inventory -> Create Transfer**.
+2. Select **Transfer Type** (Store to Store, DC to Store, Store to DC) and enter source/destination locations.
+3. Add item SKUs and requested quantities.
+4. Click **Approve**. System reserves stock at source location (`ITEM_LOC_SOH.TSF_RESERVED_QTY`).
+5. Upon warehouse dispatch, system generates a Bill of Lading (`BOL_SHIPMENT`) and publishes outbound ASN RIB messages (`ShipmentPub`). In-transit quantities update automatically (`IN_TRANSIT_QTY`).

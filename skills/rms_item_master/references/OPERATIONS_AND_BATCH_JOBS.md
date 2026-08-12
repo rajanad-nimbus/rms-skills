@@ -1,7 +1,5 @@
 # RMS Item Master & Product Attributes - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **supcnstr (Scale Purchase Orders Based on Supplier Constraints)**
 
 |Module Name|supcnstr.pc|
@@ -11,8 +9,6 @@
 |**Module Type**|Business Processing|
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS368|
-
-
 
 ---
 
@@ -26,8 +22,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS240|
 
-
-
 ---
 
 ### **hstbldmth_diff (Monthly Sales History Rollup By Diffs)**
@@ -39,8 +33,6 @@
 |**Module Type**|Business Processing|
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS242|
-
-
 
 ---
 
@@ -54,8 +46,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS245|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -71,51 +61,36 @@
 |Catalog ID|256|
 |Runtime Parameters|Database connection and mode of extract (‘full’<br>or ‘delta’)|
 
-
-
 =========================================
 
-## Excerpts from Operations Guide 2 - RIB Integration
-
 ### **Differentiator Groups Publication API**
-
 
 ---
 
 ### **Differentiator ID Publication API**
 
-
 ---
 
 ### **UDA Publication API**
-
 
 ---
 
 ### **Diff Group Subscription API**
 
-
 ---
 
 ### **Diff ID Subscription API**
 
-
 =========================================
-
-## Excerpts from Operations Guide 3 - Technical Architecture
 
 ### **Diff ID**
 
 To create a Diff ID in RMS, navigate and select **Items > Diffs > Diff Group/Diff IDs** .
 
-
 RIB Validation: Validate the details in RIB.
-
 
         - Diffs Publisher in RIB-RMS
 
-
         - Diffs Subscriber in RIB-SIM
-
 
 When the Diff ID is available in both publisher and subscriber, it will be available in SIM.

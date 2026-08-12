@@ -1,7 +1,5 @@
 # RMS Costing, Landed Cost & Expenses - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **batch_compeffupd (Update ELC Components)**
 
 |Module Name|batch_compeffupd.ksh|
@@ -13,13 +11,9 @@
 |**Catalog ID**|RMS185|
 |**Runtime Parameters**||
 
-
-
 **28** Oracle Retail Merchandising System
 
-
 batch_compeffupd (Update ELC Components)
-
 
 ---
 
@@ -35,8 +29,6 @@ batch_compeffupd (Update ELC Components)
 |**Catalog ID**|RMS190|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **elcexcprg (Purge Aged Cost Component Exceptions)**
@@ -50,12 +42,9 @@ batch_compeffupd (Update ELC Components)
 |**Catalog ID**|RMS222|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ## **Cost Changes**
-
 
 ---
 
@@ -70,10 +59,6 @@ batch_compeffupd (Update ELC Components)
 |**Catalog ID**|RMS355|
 |**Runtime Parameters**||
 
-
-
 =========================================
-
-## Excerpts from Operations Guide 2 - RIB Integration
 
 ### **Cost Change Subscription API**

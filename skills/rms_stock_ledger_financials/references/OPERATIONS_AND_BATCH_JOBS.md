@@ -1,7 +1,5 @@
 # RMS Stock Ledger & Financial Accounting - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **Program Summary**
 
 |Program|Description|
@@ -14,7 +12,6 @@
 |trunctbl|Truncate Table Script|
 |rms_oi_purge.ksh|Purge Dashboard Working Tables|
 
-
 |status_retry_cleanup.ksh|(Purge Asynchronous Job|
 |---|---|
 |**Module Name**|async_job_status_retry_cleanup.ksh|
@@ -24,8 +21,6 @@
 |**Module Technology**|ksh|
 |**Catalog ID**|RMS180|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -40,8 +35,6 @@
 |**Catalog ID**|Individula Pre/Post Jobs have Catalog IDs|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **Program Summary**
@@ -55,8 +48,6 @@
 |Pricingeventprocess.ksh|Processing and application of Price events when<br>RPM is not used.|
 |Itmrsrvpurge.ksh|Purging expired item reservation records|
 
-
-
 ---
 
 ### **Program Summary**
@@ -68,8 +59,6 @@ The following batch designs are included in this functional area:
 |cfagen.ksh|CFAS Database Object Creation Script|
 |cfamigrate.ksh|CFAS Metadata Migration Script|
 |cfastgload.ksh|Bulk load of CFAS Attribute Data|
-
-
 
 ---
 
@@ -90,10 +79,7 @@ The following batch designs are included in this functional area:
 |dealcls.pc|Close Expired Deals|
 |dealprg.pc|Purge Closed Deals|
 
-
-
 Operations Guide, Volume 1 - Batch Overviews and Designs **109**
-
 
 dealupld (Upload of Deals from 3rd Party Systems)
 
@@ -107,11 +93,7 @@ dealupld (Upload of Deals from 3rd Party Systems)
 |**Catalog ID**|RMS42|
 |**Runtime Parameters**||
 
-
-
 =========================================
-
-## Excerpts from Operations Guide 3 - Technical Architecture
 
 #### **Oracle Application Development Framework (ADF)**
 
@@ -121,7 +103,6 @@ personalized in all dimensions. Customizations are global changes, visible to al
 that are performed by an administrator. Personalization is user-made changes that are
 only visible to the person making the change. ADF is based on the Java Enterprise
 Edition platform.
-
 
 **Model View Controller (MVC) Architectural Pattern**
 
@@ -137,16 +118,12 @@ ADF provide a set of components that realize the goals of each part of MVC patte
 
         - View is realized by the ADF Faces Layer
 
-
 Technical Architecture **3**
-
 
 Overview
 
-
         - ADF Business components and other backend components that sit below the model
 layer are called Business Services.
-
 
 **ADF Security**
 
@@ -156,26 +133,22 @@ default roles and permissions.
         - Tools to generate the file-based identity store (for both Oracle Internet Directory and
 AD) based on the framework.
 
-
         - Tools to migrate the file-based security store in to the database for QA and
 production environments.
 
         - Reference implementation for clients to manage the security based on their business
 needs.
 
-
         - OPSS-based batch security framework (RAF).
 
         - Tools/documentation to implement centralized logout in SSO (Oracle Access
 Management (OAM)) environments.
-
 
 **ADF View (ADFv)**
 
 The View layer provides the user interface to the application. The view layer uses HTML,
 rich Java components or XML and its variations to render the user interface. JSF based
 tag libraries are used for displaying the UI.
-
 
 **ADF Controller (ADFc)**
 
@@ -187,7 +160,6 @@ as the controller. The Apache Jakarta Struts controller, an open source framewor
 controller, is the de facto standard for Java-based web systems. Oracle ADF uses the
 Struts controller to manage the flow of web applications.
 
-
 **ADF Business Components (ADFbc)**
 
 The business service layer manages the interaction with a data persistence layer. It
@@ -196,7 +168,6 @@ management and business logic execution.
 
 Business Components easily map the database object and extend it with business logic,
 validation and so on.
-
 
 The idea behind Business Components is to abstract the data layer from the view layer.
 This is a key concept in the MVC pattern. Business Components will expose the interface
@@ -213,12 +184,9 @@ are consistently enforced. You associate an entity object with others to reflect
 relationships in the underlying database schema to create a layer of business domain
 objects to reuse in multiple applications.
 
-
 **4** Oracle Retail Merchandising System
 
-
 Overview
-
 
         - View object – A view object represents an SQL query. You use the full power of the
 familiar SQL language to join, filter, sort, and aggregate data into the exact shape
@@ -232,7 +200,6 @@ clients use to work with application data. It defines an updatable data model an
 top-level procedures and functions (called service methods) related to a logical unit
 of work related to an end-user task.
 
-
 **ADF Model (ADFm)**
 
 This component acts as the connector between the view and business logic layers.
@@ -242,12 +209,10 @@ layers. Oracle ADF provides a Model layer implementation that sits on top of Bus
 Services, providing a single interface that can be used to access any type of Business
 Services.
 
-
 Developers get the same development experience when binding any type of Business
 Service layer implementation to the view and Controller layers. The Model layer in
 Oracle ADF served as the basis for JSR 227, A Standard Data binding & Data Access
 Facility for J2EE.
-
 
 **Oracle Metadata Services (MDS)**
 
@@ -268,11 +233,9 @@ Retail Applications allow the following through MDS:
 
         - Implicit personalization of few ADF UI attributes.
 
-
 ---
 
 #### **RESTART_PROGRAM_STATUS**
-
 
 The RESTART_PROGRAM_STATUS table is the table that holds record keeping
 information about current program processes. The number of rows for a program on the
@@ -285,129 +248,95 @@ assigned, the PROGRAM_STATUS is updated to prevent the assignment of that thread
 to another process. Information is logged on the current status of a given thread, as well
 as record keeping information such as operator and process timing information.
 
-
 **RESTART_PROGRAM_STATUS**
-
 
 ( PK)RESTART_NAME varchar2 50 Program name
 
-
 (PK)THREAD_VAL num 10 Thread counter
-
 
 START_TIME date dd-mon-yy hh:mi:ss
 
-
 PROGRAM_NAME varchar2 25 Program name
-
 
 PROGRAM_STATUS varchar2 25 Started, aborted, aborted in init, aborted in
 process, aborted in final, completed, ready for
 start.
 
-
 RESTART_FLAG varchar2 1 Automatically set to ‘N’ after abnormal end,
 must be manually set to ‘Y’ for program to
 restart.
 
-
 RESTART_TIME date dd-mon-yy hh:mi:ss.
-
 
 FINISH_TIME date dd-mon-yy hh:mi:ss.
 
-
 CURRENT_PID num 15 Starting program ID.
 
-
 CURRENT_OPERATOR_ID varchar2 20 Operator that started the program.
-
 
 ERR_MESSAGE varchar2 255 Record that caused program abort and
 associated error message.
 
-
 CURRENT_ORACLE_SID num 15 Oracle SID for the session associated with the
 current process.
 
-
 Pro*C Restart and Recovery **187**
-
 
 Table of Description and Definition
 
-
 **RESTART_PROGRAM_STATUS**
-
 
 CURRENT_SHADOW_PID [num ] 15 O/S process ID for the shadow process
 associated with the current process. It is used
 to locate the session trace file when a process is
 not finished successfully.
 
-
 ---
 
 #### **RESTART_PROGRAM_HISTORY**
-
 
 The RESTART_PROGRAM_HISTORY table will contain one record for every
 successfully completed program thread with restart/recovery logic. Upon the successful
 completion of a program thread, its record on the RESTART_PROGRAM_STATUS table
 will be inserted into the history table. Table purging will be at user discretion.
 
-
 **RESTART_PROGRAM_HISTORY**
-
 
 RESTART_NAME varchar2 50 Program name.
 
-
 THREAD_VAL Num 10 Thread counter.
-
 
 START_TIME Date dd-mon-yy hh:mi:ss.
 
-
 PROGRAM_NAME varchar2 25 Program name.
 
-
 NUM_THREADS Num 10 Number of threads.
-
 
 COMMIT_MAX_CTR num 6 Numeric maximum value for counter
 before commit occurs.
 
-
 RESTART_TIME date dd-mon-yy hh:mi:ss.
 
-
 FINISH_TIME date dd-mon-yy hh:mi:ss.
-
 
 SHADOW_PID num 15 O/S process ID for the shadow process
 associated with the process. It is used to
 locate the session trace file.
 
-
 SUCCESS_FLAG varchar2 1 Indicates whether the process finished
 successfully (reserved for future use).
 
-
 NON_FATAL_ERR_FLAG varchar2 1 Indicates whether non-fatal errors have
 occurred for the process.
-
 
 NUM_COMMITS num 12 Total number of commits for the process.
 The possible last commit when
 restart/recovery is closed is not counted.
 
-
 AVG_TIME_BTWN_COMMITS num 12 Accumulated average time between
 commits for the process. The possible last
 commit when restart/recovery is closed is
 not counted.
-
 
 LREAD num Session logical reads. The sum of "db block
 gets" plus "consistent gets". This includes
@@ -416,44 +345,33 @@ the buffer cache or process private
 
 memory.
 
-
 LWRITE num Session logical writes. The sum of "db
 block changes" plus "consistent changes".
-
 
 PREAD num Physical reads. Total number of data
 blocks read from disk.
 
-
 **188** Oracle Retail Merchandising System
-
 
 Table of Description and Definition
 
-
 **RESTART_PROGRAM_HISTORY**
-
 
 UGA_MAX num Peak UGA (user global area) size for a
 session.
 
-
 PGA_MAX num Peak PGA (program global area) size for
 the session.
-
 
 SQLNET_BYTES_FROM_CLIENT  num Total number of bytes received from the
 client over Oracle Net Services.
 
-
 SQLNET_BYTES_TO_CLIENT     num Total number of bytes sent to the client
 from the   foreground processes.
-
 
 SQLNET_ROUNDTRIPS          num Total number of Oracle Net Services
 messages sent to and received from the
 client.
-
 
 COMMITS num Number of user commits. When a user
 commits a transaction, the redo generated
@@ -462,11 +380,9 @@ blocks must be written to disk. Commits
 often represent the closest thing to a user
 transaction rate.
 
-
 ---
 
 ### **ksh Driven Batch Programs**
-
 
 For ksh driven batch programs that call PL/SQL for its main processing logic, multithreading is also supported. An example of this type of batch job is ksh script
 stockcountupload.ksh calling PL/SQL package CORESVC_STOCK_UPLOAD_SQL. The
@@ -476,10 +392,7 @@ programs). Column MAX_CONSURRENT_THREAD holds the maximum number of
 concurrent threads. MAX_CHUNK_SIZE defines the commit size within each thread,
 similar to the RESTART_CONTROL.COMMIT_MAX_CTR column.
 
-
 Pro*C Multi-Threading **205**
-
-
 
 ---
 

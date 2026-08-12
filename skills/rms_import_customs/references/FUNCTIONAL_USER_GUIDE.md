@@ -1,62 +1,23 @@
-# RMS Import Management & Customs - Functional User Guide Workflows & Reports
+# RMS Import Management & Customs - Functional User Guide Workflows
 
-## Excerpts from Functional User Guide (Workflows & Reports)
-
-#### **Letter of Credit Details Report**
-
-
-The Letter of Credit Details report displays the details of a given letter of credit.
-
+Comprehensive functional user guide covering customs entry tracking, commercial invoices, Letters of Credit (LC), and HTS tariff classification (`CE_HEAD`, `LC_HEAD`, `HTS`).
 
 ---
 
-#### **Viewing Letter of Credit Details Report**
+## 1. Key User Roles & Responsibilities
 
-
-To view the letter of credit details report:
-
-
-**1.** From the Tasks menu, select **Reports**           - **Import Management**           - **Letter of Credit**
-**Details** . The Letter of Credit Details Report window appears.
-
-
-_**Figure 3–20**_ _**Letter of Credit Details Report**_
-
+| User Role | Primary UI Tasks | Key Approvals & Overrides |
+| :--- | :--- | :--- |
+| **Import Manager** | Tracks shipment customs entry forms, manages import documentation, opens LCs. | Authorizes Letter of Credit drawdowns. |
+| **Customs Broker** | Inputs customs clearance assessment details, duty payments, and vessel manifests. | Submits cleared Customs Entry records (`CE_HEAD`). |
 
 ---
 
-#### **Letter of Credit Amendments Report**
+## 2. Step-by-Step UI Operational Workflows
 
-
-The Letter of Credit Amendments report displays the details of amendments made to
-a given letter of credit.
-
-
----
-
-#### **Viewing Letter of Credit Amendments Report**
-
-
-To view the letter of credit amendments report:
-
-
-**3-16** Oracle® Retail Operational Insights User Guide
-
-
-Finance Report
-
-
-**1.** From the Tasks menu, select **Reports**           - **Import Management**           - **Letter of Credit**
-**Amendments** . The Letter of Credit Amendments Report window appears.
-
-
-_**Figure 3–21**_ _**Letter of Credit Amendments**_
-
-
----
-
-#### **DepartmentYear End Valuation Report**
-
-
-The Department Year End Valuation report shows a fiscal year end summary of
-inventory value by location and department.
+### 2.1 Managing Customs Entries & Letters of Credit
+1. Navigate to **Tasks -> Import Management -> Customs Entry**.
+2. Link the import shipment to the target Purchase Order and Commercial Invoice number.
+3. Input port of entry, clearing customs broker ID, and duty fee breakdowns (`CE_CHARGES`).
+4. Link active Letter of Credit (`LC_HEAD`) to guarantee vendor payment upon Bill of Lading (`BOL`) presentation.
+5. Click **Clear Entry** upon customs release.

@@ -1,9 +1,6 @@
 # RMS Purchase Orders - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ## **Purchase Order**
-
 
 ---
 
@@ -18,8 +15,6 @@
 |**Catalog ID**|RMS46|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **ediupack (Upload Purchase Order and Purchase Order Change** **Acknowledgements from Suppliers to RMS)**
@@ -32,8 +27,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS48|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -48,8 +41,6 @@
 |**Integration Catalog ID**|RMS387|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **supcnstr (Scale Purchase Orders Based on Supplier Constraints)**
@@ -62,31 +53,21 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS368|
 
-
-
 =========================================
-
-## Excerpts from Operations Guide 2 - RIB Integration
 
 ### **Create Purchase Order Services**
 
-
 **Functional Area**
-
 
 Procurement
 
-
 **Business Overview**
 
-
 The primary role of this service is to create purchase orders and send them to RMS.
-
 
 ---
 
 #### **Create Purchase Order**
-
 
 **Business Overview**
 
@@ -94,17 +75,13 @@ This Web service calls the existing RMS XOrder API directly with input parameter
 more information on RMS XOrder API, see the sections addressing both the Store Order
 Subscription API and the PO Subscription API.
 
-
 ReSTful Web Service Implementation for RMS **325**
 
-
 Create Purchase Order Services
-
 
 **Service Type**
 
 Post
-
 
 **ReST URL**
 
@@ -175,42 +152,32 @@ Post
 
 **Output**
 
-
 NA
 
-
 **Table Impact**
-
 
 For more information on RMS XOrder API, see the Store Order Subscription API and the
 PO Subscription API sections.
 
-
 **326** Oracle Retail Merchandising System
 
-
 Recent Inventory Transfer Services
-
 
 ---
 
 ### **Recent Purchase Order Services**
 
-
 ---
 
 #### **Purchase Order Status List**
-
 
 **Business Overview**
 
 Retrieves all valid purchase order statuses.
 
-
 **Service Type**
 
 Get
-
 
 **ReST URL**
 
@@ -221,56 +188,39 @@ Get
 
 **Input Parameters**
 
-
 No input.
-
 
 **Output**
 
-
     - Status Code
-
 
 ReSTful Web Service Implementation for RMS **335**
 
-
 Recent Purchase Order Services
-
 
         - Code Description
 
-
         - Code Sequence
-
 
 **Table Impact**
 
-
 **TABLE** **SELECT** **INSERT** **UPDATE** **DELETE**
-
 
 CODE_HEAD Yes No No No
 
-
 CODE_DETAIL Yes No No No
-
 
 ---
 
 #### **Search Purchase Order User ID**
 
-
 **Business Overview**
-
 
 This service retrieves a list of user IDs associated with creating a purchase order.
 
-
 **Service Type**
 
-
 Get
-
 
 **ReST URL**
 
@@ -284,42 +234,29 @@ Get
 
 Search String - Required
 
-
 Page Size - Optional
 
-
 Page Number - Optional
-
 
 **Output**
 
         - ID
 
-
         - Total Record Count
-
 
         - Next Page URL
 
-
         - Previous Page URL
-
 
 **Table Impact**
 
-
 **TABLE** **SELECT** **INSERT** **UPDATE** **DELETE**
-
 
 V_ORDHEAD Yes No No No
 
-
 =========================================
 
-## Excerpts from Operations Guide 3 - Technical Architecture
-
 #### **Purchase Order**
-
 
 To create a purchase order in RMS for a store you must navigate and select **Orders** 
 **Create Order** . When the order is created and submitted, approve the Purchase Order
@@ -328,11 +265,8 @@ To create a purchase order in RMS for a store you must navigate and select **Ord
 RIB Validation: When the purchase order is create, make sure to verify the order number
 for the following:
 
-
         - ORDER_PUBLISHER in RIB-RMS
 
-
         - ORDER_SUBSCRIBER in RIB-SIM
-
 
 **238** Oracle Retail Merchandising System

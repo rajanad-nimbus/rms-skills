@@ -1,7 +1,5 @@
 # RMS Tax & VAT Configuration - Operations, Batch Jobs & RIB Integration Guide
 
-## Excerpts from Operations Guide 1 - Batch Job Designs
-
 ### **vatdlxpl (Mass VAT Updates for Items/Locations)**
 
 |Module Name|vatdlxpl.pc|
@@ -12,8 +10,6 @@
 |**Module Technology**|ProC|
 |**Catalog ID**|RMS384|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -28,8 +24,6 @@
 |**Catalog ID**|RMS494|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **batch_rplapprvgtax.ksh (Update Replenishment Order Taxes)**
@@ -42,8 +36,6 @@
 |**Module Technology**|ksh|
 |**Catalog ID**|RMS194|
 |**Runtime Parameters**||
-
-
 
 ---
 
@@ -58,8 +50,6 @@
 |**Catalog ID**|RMS113|
 |**Runtime Parameters**||
 
-
-
 ---
 
 ### **export_itemvat.ksh (Extraction of vat item data)**
@@ -73,16 +63,10 @@
 |**Catalog ID**|RMS259|
 |**Runtime Parameters**|Database connection and mode of extract (‘full’<br>or ‘delta’).<br>Threading indicator (Y/N).<br>With ‘full’ mode optional parameter (‘store’) for<br>single store file.|
 
-
-
 **474** Oracle Retail Merchandising System
-
 
 export_itemvat.ksh (Extraction of vat item data)
 
-
 =========================================
-
-## Excerpts from Operations Guide 2 - RIB Integration
 
 ### **Item Number Reservation Service API**

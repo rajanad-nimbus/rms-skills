@@ -1,0 +1,23 @@
+# ReSA Sales Audit Exports - Physical Datamodel
+
+This reference details the physical schema tables, DDL column types, primary keys, foreign keys, and indexes for ReSA Outbound Exports and GL Cross-Referencing.
+
+```sql
+CREATE TABLE SA_EXPORT_LOG (
+    STORE_DAY_ID NUMBER(10) NOT NULL,
+    SYSTEM_CODE VARCHAR2(10) NOT NULL, -- 'RMS', 'GL', 'ACH', 'SIM', 'POS'
+    STATUS VARCHAR2(1) NOT NULL, -- 'P'=Pending, 'C'=Complete, 'E'=Error
+    LAST_UPDATE_DATETIME DATE NOT NULL,
+    THREAD_NO NUMBER(4) DEFAULT 1,
+    CONSTRAINT PK_SA_EXPORT_LOG PRIMARY KEY (STORE_DAY_ID, SYSTEM_CODE)
+);
+
+CREATE TABLE SA_FIF_GL_CROSS_REF (
+    TOTAL_ID VARCHAR2(10) NOT NULL,
+    TENDER_TYPE_GROUP VARCHAR2(6) NOT NULL,
+    STORE NUMBER(10) NOT NULL,
+    GL_ACCOUNT_NUMBER VARCHAR2(50) NOT NULL,
+    SET_OF_BOOKS_ID NUMBER(4) NOT NULL,
+    CONSTRAINT PK_SA_FIF_GL_XREF PRIMARY KEY (TOTAL_ID, TENDER_TYPE_GROUP, STORE)
+);
+```

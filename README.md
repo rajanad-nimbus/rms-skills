@@ -4,7 +4,7 @@
 ![RMS Version](https://img.shields.io/badge/RMS-v16-blue.svg)
 ![Ecosystems](https://img.shields.io/badge/supported-Claude%20%7C%20Gemini%20%7C%20OpenAI-purple.svg)
 
-An open agent skill library providing comprehensive physical database schemas, functional user guides, batch operations, and architectural reference models based on **Oracle Retail Merchandising System 16 (RMS 16)**.
+An open agent skill library providing comprehensive physical database schemas, **RRL 16 Business Process Models (RRM)**, **Product Domain Architecture (RRA)**, **Retail Service Group (RSG) integration specs**, functional user guides, and batch operations for **Oracle Retail Merchandising System 16 (RMS 16)**, **RPM**, **ReIM**, **ReSA**, and **Allocations**.
 
 Built on the Mat Pocock Open Agent Skill Standard. Compatible with **Claude Code**, **Gemini**, **OpenAI / ChatGPT**, and all Mat Pocock standard agents.
 

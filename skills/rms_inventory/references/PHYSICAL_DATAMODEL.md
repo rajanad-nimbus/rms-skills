@@ -1,5 +1,43 @@
 # RMS Inventory & Stocktake Datamodel - Physical Data Model Reference
 
+## Table: ITEM_LOC_SOH
+
+**Description:** Primary perpetual stock-on-hand table containing inventory, in-transit, reserved, and non-sellable unit quantities per item/location.
+
+### Columns
+| No | Column Name | PK | FK | Mandatory | Data Type | Description |
+|---|---|---|---|---|---|---|
+| 1 | ITEM | P | F | Y | VARCHAR (25) | Unique alphanumeric value that identifies the item. |
+| 2 | LOC | P | F | Y | NUMERIC (10) | Numeric identifier of the location (store, warehouse, finisher). |
+| 3 | LOC_TYPE |  |  | Y | VARCHAR (1) | Location type (S=Store, W=Warehouse, E=External Finisher). |
+| 4 | STOCK_ON_HAND |  |  | Y | NUMERIC (12,4) | Current sellable stock on hand for the item. |
+| 5 | IN_TRANSIT_QTY |  |  | Y | NUMERIC (12,4) | Shipped but unreceived in-transit quantity. |
+| 6 | TSF_RESERVED_QTY |  |  | Y | NUMERIC (12,4) | Reserved quantity for transfer requests. |
+| 7 | TSF_EXPECTED_QTY |  |  | Y | NUMERIC (12,4) | Expected inbound transfer quantity. |
+| 8 | RTV_QTY |  |  | Y | NUMERIC (12,4) | Approved RTV quantity awaiting vendor return dispatch. |
+| 9 | NON_SELLABLE_QTY |  |  | Y | NUMERIC (12,4) | Total non-sellable inventory quantity. |
+| 10 | CUSTOMER_RESV |  |  | Y | NUMERIC (12,4) | Reserved quantity for customer orders (BOPIS/SFS). |
+| 11 | CUSTOMER_BACKORDER |  |  | Y | NUMERIC (12,4) | Backordered quantity for customer orders. |
+| 12 | AV_COST |  |  |  | NUMERIC (20,4) | Weighted average unit cost at location. |
+| 13 | UNIT_COST |  |  |  | NUMERIC (20,4) | Unit cost at location. |
+| 14 | SOH_UPDATE_DATETIME |  |  |  | Date | Date and time of most recent SOH update. |
+
+### Indexes
+
+|Index Name|State|Functional|Spatial|Expression|Column Name|Sort Order|
+|---|---|---|---|---|---|---|
+|PK_ITEM_LOC_SOH|PK||||ITEM|ASC|
+||||||LOC|ASC|
+|ITEM_LOC_SOH_I1|||||LOC|ASC|
+
+---
+
+## Table: ITEM_LOC_SOH_EOD
+
+**Description:** Holds end-of-day snapshot of inventory buckets at item-location intersection for daily historical rollups.
+
+---
+
 ## Table: CARTON
 
 **Description:** This table will hold a record for each carton to the destination location. A carton can contain items from multiple orders. The destination location could be the allocation location for cross-dock orders or the order location.
@@ -1125,3 +1163,6 @@
 |---|---|---|
 |Table Level|CHK_STOCK_LEDG_INS_TYP_CODE|TYPE_CODE IN('S', 'W', 'B', 'D', 'C', 'E')<br>|
 |Column Level|TYPE_CODE||
+
+---
+

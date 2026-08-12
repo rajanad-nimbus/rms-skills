@@ -1,7 +1,5 @@
 # RMS Costing, Landed Cost & Expenses - System Options & Implementation Configurations
 
-## Excerpts from Implementation Guide (System Options & Setup)
-
 ### **Landed Cost**
 
 Landed cost is the total cost of an item received from a vendor inclusive of the supplier
@@ -11,21 +9,17 @@ various cost components, associating them to the purchase orders, calculating th
 estimated landed costs at the time of purchase order creation. It also facilitates the
 tracking and booking of the actual costs after the receipt process.
 
-
 Estimated Landed Cost (ELC) is composed of cost components from the Supplier,
 Trading Partners, Item and Origin Country, which are brought together during
 Purchase Order (PO) creation to develop an estimate of costs associated with
 purchasing a particular item on the current PO.
 
-
 The components of landed cost are defined using Expenses, Assessments, and
 Computation Value Bases (CVBs).
-
 
 ---
 
 ### **Actual Landed Costs**
-
 
 RTM helps to track the actual landed cost incurred when buying an import item. The
 module reports variances between estimated and actual landed costs by cost
