@@ -1,0 +1,28 @@
+{
+  "name": "rms-skills",
+  "version": "1.0.0",
+  "description": "Oracle Retail Merchandising System (RMS) skills for AI coding agents",
+  "main": "skills.json",
+  "bin": {
+    "rms-skills": "./bin/install.js"
+  },
+  "scripts": {
+    "version": "echo 1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajanad-nimbus/rms-skills.git"
+  },
+  "keywords": [
+    "oracle-rms",
+    "ai-agent-skills",
+    "mat-pocock-architecture",
+    "retail-merchandising-system"
+  ],
+  "author": "rajanad-nimbus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rajanad-nimbus/rms-skills/issues"
+  },
+  "homepage": "https://github.com/rajanad-nimbus/rms-skills#readme"
+}
