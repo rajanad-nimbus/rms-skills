@@ -1,6 +1,5 @@
 # RMS Skills (Oracle Retail Merchandising System)
 
-![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Ecosystems](https://img.shields.io/badge/supported-Claude%20%7C%20Gemini%20%7C%20OpenAI-purple.svg)
 
@@ -86,43 +85,13 @@ Alternatively, inherit skills remotely by updating your project's `.agents/skill
 {
   "inherits": [
     {
-      "path": "https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/v1.0.0/skills.json"
+      "path": "https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/skills.json"
     }
   ]
 }
 ```
 
 ---
-
-## 🏷️ Versioning
-
-Releases are tracked with Semantic Versioning (`vX.Y.Z`).
-
-- Current Version: **`v1.0.0`**
-- Version releases: [GitHub Releases](https://github.com/rajanad-nimbus/rms-skills/releases)
-
----
-
-## 📂 Repository Structure
-
-```
-├── .agents/
-│   ├── AGENTS.md
-│   └── skills.json
-├── bin/
-│   └── install.js
-├── skills/
-│   ├── rms_purchase_orders/
-│   ├── rms_sales_audit_transactions/
-│   ├── rms_inventory/
-│   ├── rms_stock_ledger_financials/
-│   └── ... (80+ skills)
-├── install.sh
-├── AGENTS.md
-├── package.json
-├── skills.json
-└── README.md
-```
 
 ## 📜 License
 
