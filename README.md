@@ -2,33 +2,85 @@
 
 ![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Ecosystems](https://img.shields.io/badge/supported-Claude%20%7C%20Gemini%20%7C%20OpenAI-purple.svg)
 
 An open agent skill library providing comprehensive physical database schemas, functional user guides, batch operations, and architectural reference models for Oracle Retail Merchandising System (RMS).
 
-Built on the Mat Pocock Open Agent Skill Standard.
+Built on the Mat Pocock Open Agent Skill Standard. Compatible with **Claude Code**, **Gemini**, **OpenAI / ChatGPT**, and all Mat Pocock standard agents.
 
 ---
 
-## 🚀 Quick Installation
+## ⚡ Quick Setup for Your AI Assistant
 
-You can install and use these skills in any AI agent setup (Claude Code, Gemini, Antigravity, etc.) using any of the following methods:
+Setup RMS Skills instantly for your AI assistant of choice using **Shell** or **npx**:
 
-### Method 1: One-Line Shell Installer (Recommended)
-Run this command from your workspace root:
+### 1. Claude Setup (Claude Code / Anthropic)
+Install skills for **Claude Code** (Local workspace or Global):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash
+# Local workspace setup for Claude
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target claude --scope local
+
+# Global setup for Claude (~/.claude/skills)
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target claude --scope global
 ```
 
-To install a specific version tag (e.g. `v1.0.0`):
+*Or via npx:*
 ```bash
-curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s v1.0.0
+npx rms-skills --target claude --scope global
 ```
 
 ---
 
-### Method 2: Register via `skills.json` Inheritance
-Add inheritance to your existing `.agents/skills.json` or global `skills.json`:
+### 2. Gemini Setup (Google Antigravity / Gemini CLI)
+Install skills for **Gemini / Antigravity**:
+
+```bash
+# Local workspace setup for Gemini (.agents/skills)
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target gemini --scope local
+
+# Global setup for Gemini (~/.gemini/config/skills)
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target gemini --scope global
+```
+
+*Or via npx:*
+```bash
+npx rms-skills --target gemini --scope global
+```
+
+---
+
+### 3. OpenAI Setup (OpenAI / Codex / ChatGPT Agents)
+Install skills for **OpenAI agents**:
+
+```bash
+# Local workspace setup for OpenAI (.openai/skills)
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target openai --scope local
+
+# Global setup for OpenAI (~/.openai/skills)
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target openai --scope global
+```
+
+*Or via npx:*
+```bash
+npx rms-skills --target openai --scope global
+```
+
+---
+
+### 4. Universal / All Assistant Setup
+To install skills for **all AI assistants simultaneously** (Claude, Gemini, and OpenAI):
+
+```bash
+# Global install across all agent frameworks
+curl -fsSL https://raw.githubusercontent.com/rajanad-nimbus/rms-skills/main/install.sh | bash -s -- --target all --scope global
+```
+
+---
+
+## 📌 Manual / Inheritance Setup (`skills.json`)
+
+Alternatively, inherit skills remotely by updating your project's `.agents/skills.json`, `.claude/skills.json`, `.gemini/config/skills.json`, or `.openai/skills.json`:
 
 ```json
 {
@@ -42,24 +94,12 @@ Add inheritance to your existing `.agents/skills.json` or global `skills.json`:
 
 ---
 
-### Method 3: Git Submodule or Clone
-Clone directly into your workspace `.agents/` folder:
+## 🏷️ Versioning
 
-```bash
-git submodule add https://github.com/rajanad-nimbus/rms-skills.git .agents/rms-skills
-```
-
-Then reference `./rms-skills/skills.json` in your local `.agents/skills.json`.
-
----
-
-## 📌 Version Tracking
-
-Skill releases and updates are tracked via Semantic Versioning (`vX.Y.Z`).
+Releases are tracked with Semantic Versioning (`vX.Y.Z`).
 
 - Current Version: **`v1.0.0`**
-- All releases are published with tagged releases on [GitHub Releases](https://github.com/rajanad-nimbus/rms-skills/releases).
-- `skills.json` and `package.json` maintain matching version identifiers for automated version checks.
+- Version releases: [GitHub Releases](https://github.com/rajanad-nimbus/rms-skills/releases)
 
 ---
 
@@ -83,12 +123,6 @@ Skill releases and updates are tracked via Semantic Versioning (`vX.Y.Z`).
 ├── skills.json
 └── README.md
 ```
-
-## 📖 Usage with AI Agents
-
-1. Once installed, agents discover registered skills automatically via `skills.json`.
-2. **Tier 1**: High-level entity summary and domain concepts in `skills/<skill>/SKILL.md`.
-3. **Tier 2**: Deep technical schemas and operations guides in `skills/<skill>/references/`.
 
 ## 📜 License
 
