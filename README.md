@@ -1,9 +1,10 @@
 # RMS Skills (Oracle Retail Merchandising System)
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+![RMS Version](https://img.shields.io/badge/RMS-v16-blue.svg)
 ![Ecosystems](https://img.shields.io/badge/supported-Claude%20%7C%20Gemini%20%7C%20OpenAI-purple.svg)
 
-An open agent skill library providing comprehensive physical database schemas, functional user guides, batch operations, and architectural reference models for Oracle Retail Merchandising System (RMS).
+An open agent skill library providing comprehensive physical database schemas, functional user guides, batch operations, and architectural reference models based on **Oracle Retail Merchandising System 16 (RMS 16)**.
 
 Built on the Mat Pocock Open Agent Skill Standard. Compatible with **Claude Code**, **Gemini**, **OpenAI / ChatGPT**, and all Mat Pocock standard agents.
 
