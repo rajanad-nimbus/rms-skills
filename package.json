@@ -1,6 +1,6 @@
 {
   "name": "rms-skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Oracle Retail Merchandising System (RMS) skills for AI coding agents",
   "main": "skills.json",
   "bin": {
