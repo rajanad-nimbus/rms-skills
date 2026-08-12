@@ -1,0 +1,249 @@
+{
+  "entries": [
+    {
+      "path": "skills/ask-matt"
+    },
+    {
+      "path": "skills/claude-handoff"
+    },
+    {
+      "path": "skills/code-review"
+    },
+    {
+      "path": "skills/codebase-design"
+    },
+    {
+      "path": "skills/diagnosing-bugs"
+    },
+    {
+      "path": "skills/domain-modeling"
+    },
+    {
+      "path": "skills/git-guardrails-claude-code"
+    },
+    {
+      "path": "skills/grill-me"
+    },
+    {
+      "path": "skills/grill-with-docs"
+    },
+    {
+      "path": "skills/grilling"
+    },
+    {
+      "path": "skills/handoff"
+    },
+    {
+      "path": "skills/implement"
+    },
+    {
+      "path": "skills/implementation_guide"
+    },
+    {
+      "path": "skills/improve-codebase-architecture"
+    },
+    {
+      "path": "skills/loop-me"
+    },
+    {
+      "path": "skills/migrate-to-shoehorn"
+    },
+    {
+      "path": "skills/operations_guide"
+    },
+    {
+      "path": "skills/prototype"
+    },
+    {
+      "path": "skills/research"
+    },
+    {
+      "path": "skills/resolving-merge-conflicts"
+    },
+    {
+      "path": "skills/rms_allocations"
+    },
+    {
+      "path": "skills/rms_batch_control_restart"
+    },
+    {
+      "path": "skills/rms_costing_expenses"
+    },
+    {
+      "path": "skills/rms_custom_flex_attributes"
+    },
+    {
+      "path": "skills/rms_customer_crm"
+    },
+    {
+      "path": "skills/rms_daily_stock_data"
+    },
+    {
+      "path": "skills/rms_deals_rebates"
+    },
+    {
+      "path": "skills/rms_forecasting_planning"
+    },
+    {
+      "path": "skills/rms_future_cost"
+    },
+    {
+      "path": "skills/rms_import_customs"
+    },
+    {
+      "path": "skills/rms_integration_apis"
+    },
+    {
+      "path": "skills/rms_inventory"
+    },
+    {
+      "path": "skills/rms_invoicing_matching"
+    },
+    {
+      "path": "skills/rms_item_attributes_uda"
+    },
+    {
+      "path": "skills/rms_item_location"
+    },
+    {
+      "path": "skills/rms_item_master"
+    },
+    {
+      "path": "skills/rms_item_packs"
+    },
+    {
+      "path": "skills/rms_merchandise_hierarchy"
+    },
+    {
+      "path": "skills/rms_organization_hierarchy"
+    },
+    {
+      "path": "skills/rms_pricing_promotions"
+    },
+    {
+      "path": "skills/rms_purchase_orders"
+    },
+    {
+      "path": "skills/rms_replenishment"
+    },
+    {
+      "path": "skills/rms_rtv_returns"
+    },
+    {
+      "path": "skills/rms_sales_audit_rules"
+    },
+    {
+      "path": "skills/rms_sales_audit_store_days"
+    },
+    {
+      "path": "skills/rms_sales_audit_transactions"
+    },
+    {
+      "path": "skills/rms_seasons_work_orders"
+    },
+    {
+      "path": "skills/rms_staging_gtt_temp"
+    },
+    {
+      "path": "skills/rms_stock_ledger_financials"
+    },
+    {
+      "path": "skills/rms_suppliers_procurement"
+    },
+    {
+      "path": "skills/rms_svc_foundation"
+    },
+    {
+      "path": "skills/rms_svc_inventory"
+    },
+    {
+      "path": "skills/rms_svc_items"
+    },
+    {
+      "path": "skills/rms_svc_orders"
+    },
+    {
+      "path": "skills/rms_svc_organization"
+    },
+    {
+      "path": "skills/rms_svc_pricing"
+    },
+    {
+      "path": "skills/rms_svc_suppliers"
+    },
+    {
+      "path": "skills/rms_system_codes_config"
+    },
+    {
+      "path": "skills/rms_system_security"
+    },
+    {
+      "path": "skills/rms_tariffs_duties"
+    },
+    {
+      "path": "skills/rms_tax_vat_config"
+    },
+    {
+      "path": "skills/rms_transaction_data"
+    },
+    {
+      "path": "skills/rms_transfers_shipments"
+    },
+    {
+      "path": "skills/scaffold-exercises"
+    },
+    {
+      "path": "skills/setup-matt-pocock-skills"
+    },
+    {
+      "path": "skills/setup-pre-commit"
+    },
+    {
+      "path": "skills/setup-ts-deep-modules"
+    },
+    {
+      "path": "skills/tdd"
+    },
+    {
+      "path": "skills/teach"
+    },
+    {
+      "path": "skills/to-questionnaire"
+    },
+    {
+      "path": "skills/to-spec"
+    },
+    {
+      "path": "skills/to-tickets"
+    },
+    {
+      "path": "skills/triage"
+    },
+    {
+      "path": "skills/user_guide"
+    },
+    {
+      "path": "skills/wait-what"
+    },
+    {
+      "path": "skills/wayfinder"
+    },
+    {
+      "path": "skills/wizard"
+    },
+    {
+      "path": "skills/writing-beats"
+    },
+    {
+      "path": "skills/writing-for-agents"
+    },
+    {
+      "path": "skills/writing-fragments"
+    },
+    {
+      "path": "skills/writing-shape"
+    }
+  ],
+  "inherits": [],
+  "exclude": []
+}
